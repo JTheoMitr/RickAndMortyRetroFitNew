@@ -37,4 +37,6 @@ interface ApiService {
     @GET("character")
     fun fetchCharacters(@Query("page") page: String)
     : Call<CharacterResponse>
+
+    // NOW MAKE NEW CALLS FOR EPISODES, PLANETS, ETC
 }
