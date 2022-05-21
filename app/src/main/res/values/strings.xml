@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RickAndMortyRetroFitNew</string>
+    <string name="character_avatar">character avatar</string>
 </resources>
