@@ -18,6 +18,7 @@ class MainAdapter(val charactersList: List<Character>) : RecyclerView.Adapter<Ma
 
 
             itemBinding.name.text = character.name
+            itemBinding.race.text = character.species
             itemBinding.image.load(character.image) {
                 transformations(CircleCropTransformation())
             }
