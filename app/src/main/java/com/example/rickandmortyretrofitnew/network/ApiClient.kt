@@ -2,7 +2,6 @@ package com.example.rickandmortyretrofitnew.network
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.http.GET
@@ -35,8 +34,8 @@ object ApiClient {
 interface ApiService {
     // get all characters
     @GET("character")
-    fun fetchCharacters(@Query("page") page: String)
-    : Call<CharacterResponse>
+    suspend fun fetchCharacters(@Query("page") page: String)
+    : CharacterResponse
 
     // NOW MAKE NEW CALLS FOR EPISODES, PLANETS, ETC
 }

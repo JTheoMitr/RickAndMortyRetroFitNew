@@ -3,15 +3,18 @@ package com.example.rickandmortyretrofitnew
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ProgressBar
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.rickandmortyretrofitnew.databinding.ActivityMainBinding
 import com.example.rickandmortyretrofitnew.network.Character
 import com.google.android.material.snackbar.Snackbar
 
 
 class MainActivity : AppCompatActivity() {
+
+    private var _binding: ActivityMainBinding? = null
+    private val binding get() = _binding!!
 
     private val viewModel : MainViewModel by lazy {
         ViewModelProvider(this).get(MainViewModel::class.java)
@@ -20,7 +23,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        _binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         viewModel.characterLiveData.observe(this) { state ->
             processCharacterResponse(state)
@@ -31,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun processCharacterResponse(state: ScreenState<List<Character>?>) {
 
-        val pb = findViewById<ProgressBar>(R.id.progressBar)
+        val pb = binding.progressBar
 
         when(state) {
             is ScreenState.Loading -> {
