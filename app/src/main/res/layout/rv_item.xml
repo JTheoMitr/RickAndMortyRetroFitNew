@@ -30,7 +30,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="Name"
-            android:textSize="14sp"
+            android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/image"
             app:layout_constraintStart_toStartOf="@id/image"
             app:layout_constraintEnd_toEndOf="@id/image" />
@@ -40,21 +41,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="Race"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:layout_constraintTop_toBottomOf="@id/name"
             app:layout_constraintStart_toStartOf="@id/image"
             app:layout_constraintEnd_toEndOf="@id/image" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/origin"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            tools:text="Origin"-->
-<!--            android:textSize="11sp"-->
-<!--            android:textColor="@color/black"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/race"-->
-<!--            app:layout_constraintStart_toStartOf="@id/race"-->
-<!--            app:layout_constraintEnd_toEndOf="@id/image" />-->
+        <TextView
+            android:id="@+id/origin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Origin"
+            android:textSize="12sp"
+            app:layout_constraintTop_toBottomOf="@id/race"
+            app:layout_constraintStart_toStartOf="@id/race"
+            app:layout_constraintEnd_toEndOf="@id/image" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -8,7 +8,16 @@ data class Character(
     @Json(name = "image")
     val image: String,
     @Json(name = "species")
-    val species: String
+    val species: String,
+    @Json(name = "origin")
+    val origin: Origin
+)
+
+data class Origin(
+    @Json(name = "name")
+    val name: String,
+    @Json(name = "url")
+    val url: String
 )
 
 
