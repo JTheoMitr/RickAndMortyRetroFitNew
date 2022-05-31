@@ -10,7 +10,9 @@ data class Character(
     @Json(name = "species")
     val species: String,
     @Json(name = "origin")
-    val origin: Origin
+    val origin: Origin,
+    @Json(name = "episode")
+    val episode: List<String>
 )
 
 data class Origin(
