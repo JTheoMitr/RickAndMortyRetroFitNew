@@ -18,10 +18,11 @@ class MainViewModel(private val repository: Repository = Repository(ApiClient.ap
     get() = _charactersLiveData
 
     init {
-        fetchCharacter()
+        fetchCharacters()
+        fetchEpisodes()
     }
 
-    private fun fetchCharacter() {
+    private fun fetchCharacters() {
 
         _charactersLiveData.postValue(ScreenState.Loading(null))
         viewModelScope.launch(Dispatchers.IO) {
@@ -32,6 +33,14 @@ class MainViewModel(private val repository: Repository = Repository(ApiClient.ap
             } catch (e: Exception) {
                 _charactersLiveData.postValue(ScreenState.Error(e.message.toString(), null))
             }
+        }
+    }
+
+    private fun fetchEpisodes() {
+        viewModelScope.launch(Dispatchers.IO) {
+            Log.d("MainViewModel", Thread.currentThread().name)
+            val episodes = repository.getEpisodes("1")
+            Log.d("MainViewModel", episodes.result.toString())
         }
     }
 

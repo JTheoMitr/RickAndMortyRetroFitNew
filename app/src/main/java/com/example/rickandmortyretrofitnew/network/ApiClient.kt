@@ -37,5 +37,10 @@ interface ApiService {
     suspend fun fetchCharacters(@Query("page") page: String)
     : CharacterResponse
 
+    // get all episodes
+    @GET("episode")
+    suspend fun fetchEpisodes(@Query("page") page: String)
+    : EpisodeResponse
+
     // NOW MAKE NEW CALLS FOR EPISODES, PLANETS, ETC
 }
