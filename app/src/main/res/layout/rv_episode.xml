@@ -34,7 +34,7 @@
             app:layout_constraintStart_toStartOf="@id/episodeName" />
 
         <TextView
-            android:id="@+id/airDate"
+            android:id="@+id/episodeAirDate"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             tools:text="Air Date"

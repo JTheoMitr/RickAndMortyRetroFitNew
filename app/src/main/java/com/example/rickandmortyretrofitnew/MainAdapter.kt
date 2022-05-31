@@ -10,7 +10,7 @@ import com.example.rickandmortyretrofitnew.network.Character
 
 class MainAdapter(val charactersList: List<Character>) : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
 
-    inner class MainViewHolder(val itemBinding: RvItemBinding) : RecyclerView.ViewHolder(itemBinding.root) {
+    inner class MainViewHolder(private val itemBinding: RvItemBinding) : RecyclerView.ViewHolder(itemBinding.root) {
         fun bindData(character: Character) {
 
 

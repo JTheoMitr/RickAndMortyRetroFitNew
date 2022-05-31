@@ -42,5 +42,5 @@ interface ApiService {
     suspend fun fetchEpisodes(@Query("page") page: String)
     : EpisodeResponse
 
-    // NOW MAKE NEW CALLS FOR EPISODES, PLANETS, ETC
+    // MAKE MORE CALL OPTIONS
 }
