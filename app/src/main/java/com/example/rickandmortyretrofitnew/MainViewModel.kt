@@ -19,7 +19,6 @@ class MainViewModel(private val repository: Repository = Repository(ApiClient.ap
 
     init {
         fetchCharacters()
-        fetchEpisodes()
     }
 
     private fun fetchCharacters() {
@@ -36,12 +35,5 @@ class MainViewModel(private val repository: Repository = Repository(ApiClient.ap
         }
     }
 
-    private fun fetchEpisodes() {
-        viewModelScope.launch(Dispatchers.IO) {
-            Log.d("MainViewModel", Thread.currentThread().name)
-            val episodes = repository.getEpisodes("1")
-            Log.d("MainViewModel", episodes.result.toString())
-        }
-    }
 
 }
