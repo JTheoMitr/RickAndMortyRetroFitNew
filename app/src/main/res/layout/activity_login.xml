@@ -30,6 +30,11 @@
         android:layout_width="0dp"
         android:autofillHints="emailAddress"
         android:layout_height="35dp"
+        android:hint="@string/email"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:singleLine="true"
+        android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:labelFor="@+id/userEmailLogin"
         android:background="@drawable/rounded_corners_black"
@@ -45,7 +50,12 @@
         android:layout_width="0dp"
         android:textColor="@color/white"
         android:autofillHints="password"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:singleLine="true"
         android:inputType="textPassword"
+        android:hint="@string/password"
+        android:textColorHint="@color/white"
         android:layout_height="35dp"
         android:background="@drawable/rounded_corners_black"
         android:layout_marginTop="15dp"
@@ -86,8 +96,6 @@
         app:layout_constraintEnd_toEndOf="@id/not_a_member"
         android:text="@string/sign_up"
         android:textColor="#68B4F1" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

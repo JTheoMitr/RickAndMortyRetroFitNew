@@ -5,4 +5,6 @@
     <string name="continue_text">Continue</string>
     <string name="not_a_member_sign_up">Not a Member? Sign Up</string>
     <string name="sign_up">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>
