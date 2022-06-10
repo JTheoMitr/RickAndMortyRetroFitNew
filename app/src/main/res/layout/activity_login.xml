@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:textSize="45sp"
         android:textAlignment="center"
-        android:text="Sign In"
+        android:text="@string/sign_in"
         android:textColor="@color/white"
         android:textStyle="bold"
         android:background="@color/black"
@@ -28,10 +28,13 @@
     <EditText
         android:id="@+id/userEmailLogin"
         android:layout_width="0dp"
+        android:autofillHints="emailAddress"
         android:layout_height="35dp"
         android:textColor="@color/white"
+        android:labelFor="@+id/userEmailLogin"
         android:background="@drawable/rounded_corners_black"
         android:layout_marginTop="75dp"
+        android:inputType="textEmailAddress"
         app:layout_constraintWidth_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,6 +44,8 @@
         android:id="@+id/userPasswordLogin"
         android:layout_width="0dp"
         android:textColor="@color/white"
+        android:autofillHints="password"
+        android:inputType="textPassword"
         android:layout_height="35dp"
         android:background="@drawable/rounded_corners_black"
         android:layout_marginTop="15dp"
@@ -54,7 +59,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Continue"
+        android:text="@string/continue_text"
         app:layout_constraintWidth_percent="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -69,7 +74,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Not a Member? Sign Up"
+        android:text="@string/not_a_member_sign_up"
         android:textColor="@color/white" />
 
     <TextView
@@ -79,7 +84,7 @@
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/not_a_member"
-        android:text="Sign Up"
+        android:text="@string/sign_up"
         android:textColor="#68B4F1" />
 
 

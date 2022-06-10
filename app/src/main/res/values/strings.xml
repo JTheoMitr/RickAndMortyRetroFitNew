@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">RickAndMortyRetroFitNew</string>
     <string name="character_avatar">character avatar</string>
+    <string name="sign_in">Sign In</string>
+    <string name="continue_text">Continue</string>
+    <string name="not_a_member_sign_up">Not a Member? Sign Up</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
