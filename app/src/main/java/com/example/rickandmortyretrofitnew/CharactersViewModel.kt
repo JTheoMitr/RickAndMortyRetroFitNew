@@ -11,7 +11,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 
-class MainViewModel(private val repository: Repository = Repository(ApiClient.apiService)) : ViewModel() {
+class CharactersViewModel(private val repository: Repository = Repository(ApiClient.apiService)) : ViewModel() {
 
     private var _charactersLiveData = MutableLiveData<ScreenState<List<Character>?>>()
     val characterLiveData : LiveData<ScreenState<List<Character>?>>
@@ -25,7 +25,7 @@ class MainViewModel(private val repository: Repository = Repository(ApiClient.ap
 
         _charactersLiveData.postValue(ScreenState.Loading(null))
         viewModelScope.launch(Dispatchers.IO) {
-            Log.d("MainViewModel", Thread.currentThread().name)
+            Log.d("CharactersViewModel", Thread.currentThread().name)
             try {
                 val client = repository.getCharacters("1")
                 _charactersLiveData.postValue(ScreenState.Success(client.result))
