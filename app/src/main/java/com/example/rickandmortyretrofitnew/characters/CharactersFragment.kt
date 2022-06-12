@@ -1,12 +1,12 @@
-package com.example.rickandmortyretrofitnew
+package com.example.rickandmortyretrofitnew.characters
 
-import android.app.ActionBar
 import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.rickandmortyretrofitnew.ScreenState
 import com.example.rickandmortyretrofitnew.databinding.FragmentCharactersBinding
 import com.example.rickandmortyretrofitnew.network.Character
 import com.google.android.material.snackbar.Snackbar
@@ -50,7 +50,7 @@ class CharactersFragment : Fragment() {
     private fun processCharacterResponse(state: ScreenState<List<Character>?>) {
 
         val pb = binding.progressBar
-        (activity as AppCompatActivity).supportActionBar?.title = "My Fragment Title"
+        (activity as AppCompatActivity).supportActionBar?.title = "All Characters"
 
 
         when(state) {

@@ -1,4 +1,4 @@
-package com.example.rickandmortyretrofitnew
+package com.example.rickandmortyretrofitnew.characters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

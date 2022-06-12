@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/charactersFragment"
-        android:name="com.example.rickandmortyretrofitnew.CharactersFragment"
+        android:name="com.example.rickandmortyretrofitnew.characters.CharactersFragment"
         android:label="fragment_characters"
         tools:layout="@layout/fragment_characters" >
         <action
