@@ -3,20 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/charactersFragment">
-
+    app:startDestination="@id/mainHubFragment2">
+    <fragment
+        android:id="@+id/mainHubFragment2"
+        android:name="com.example.rickandmortyretrofitnew.MainHubFragment"
+        android:label="fragment_main_hub"
+        tools:layout="@layout/fragment_main_hub" >
+        <action
+            android:id="@+id/action_mainHubFragment2_to_charactersFragment"
+            app:destination="@id/charactersFragment" />
+        <action
+            android:id="@+id/action_mainHubFragment2_to_episodesFragment"
+            app:destination="@id/episodesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/charactersFragment"
         android:name="com.example.rickandmortyretrofitnew.characters.CharactersFragment"
         android:label="fragment_characters"
-        tools:layout="@layout/fragment_characters" >
-        <action
-            android:id="@+id/action_charactersFragment_to_episodesActivity"
-            app:destination="@id/episodesActivity" />
-    </fragment>
-    <activity
-        android:id="@+id/episodesActivity"
-        android:name="com.example.rickandmortyretrofitnew.EpisodesActivity"
-        android:label="fragment_episodes"
-        tools:layout="@layout/fragment_episodes" />
+        tools:layout="@layout/fragment_characters" />
+    <fragment
+        android:id="@+id/episodesFragment"
+        android:name="com.example.rickandmortyretrofitnew.episodes.EpisodesFragment"
+        android:label="EpisodesFragment" />
 </navigation>

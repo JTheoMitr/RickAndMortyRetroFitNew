@@ -50,6 +50,7 @@ class CharactersFragment : Fragment() {
     private fun processCharacterResponse(state: ScreenState<List<Character>?>) {
 
         val pb = binding.progressBar
+
         (activity as AppCompatActivity).supportActionBar?.title = "All Characters"
 
 
