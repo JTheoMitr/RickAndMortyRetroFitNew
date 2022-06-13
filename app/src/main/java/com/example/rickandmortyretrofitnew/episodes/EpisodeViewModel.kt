@@ -1,10 +1,12 @@
-package com.example.rickandmortyretrofitnew
+package com.example.rickandmortyretrofitnew.episodes
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.rickandmortyretrofitnew.Repository
+import com.example.rickandmortyretrofitnew.ScreenState
 import com.example.rickandmortyretrofitnew.network.ApiClient
 import com.example.rickandmortyretrofitnew.network.Episode
 import kotlinx.coroutines.Dispatchers

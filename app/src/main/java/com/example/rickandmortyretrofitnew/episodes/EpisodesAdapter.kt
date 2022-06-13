@@ -1,11 +1,9 @@
-package com.example.rickandmortyretrofitnew
+package com.example.rickandmortyretrofitnew.episodes
 
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import coil.load
-import coil.transform.CircleCropTransformation
 import com.example.rickandmortyretrofitnew.databinding.RvEpisodeBinding
 import com.example.rickandmortyretrofitnew.network.Episode
 

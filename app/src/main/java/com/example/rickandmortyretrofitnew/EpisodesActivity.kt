@@ -7,6 +7,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.rickandmortyretrofitnew.databinding.ActivityEpisodesBinding
+import com.example.rickandmortyretrofitnew.episodes.EpisodeViewModel
+import com.example.rickandmortyretrofitnew.episodes.EpisodesAdapter
 import com.example.rickandmortyretrofitnew.network.Episode
 import com.google.android.material.snackbar.Snackbar
 

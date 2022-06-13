@@ -1,4 +1,4 @@
-package com.example.rickandmortyretrofitnew
+package com.example.rickandmortyretrofitnew.episodes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.example.rickandmortyretrofitnew.R
+import com.example.rickandmortyretrofitnew.ScreenState
 import com.example.rickandmortyretrofitnew.databinding.FragmentEpisodesBinding
 import com.example.rickandmortyretrofitnew.network.Episode
 import com.google.android.material.snackbar.Snackbar
