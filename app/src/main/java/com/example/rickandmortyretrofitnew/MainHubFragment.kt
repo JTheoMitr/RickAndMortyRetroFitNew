@@ -6,10 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import com.example.rickandmortyretrofitnew.databinding.FragmentCharactersBinding
+import com.example.rickandmortyretrofitnew.databinding.FragmentMainHubBinding
 
 
 class MainHubFragment : Fragment() {
 
+    private var _binding: FragmentMainHubBinding? = null
+    private val binding get() = _binding!!
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +26,7 @@ class MainHubFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        adjustTitle("Hello")
+        adjustTitle("Welcome, User")
     }
 
     override fun onCreateView(
@@ -29,7 +35,15 @@ class MainHubFragment : Fragment() {
 
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main_hub, container, false)
+        _binding = FragmentMainHubBinding.inflate(inflater, container, false)
+
+        binding.btnCharacters.setOnClickListener {
+            findNavController().navigate(
+            R.id.action_mainHubFragment2_to_charactersFragment
+            )
+        }
+
+        return binding.root
 
     }
 

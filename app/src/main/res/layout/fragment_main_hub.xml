@@ -6,10 +6,36 @@
     android:background="@drawable/rick_and_morty_wallpaper_whatspaper_3"
     tools:context=".MainHubFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+    <Button
+        android:id="@+id/btnCharacters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_black"
+        android:layout_gravity="center"
+        android:layout_marginTop="-100dp"
+        android:text="@string/characters"
+        android:textColor="@color/white"
+        android:alpha=".75" />
+
+    <Button
+        android:id="@+id/btnEpisodes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_black"
+        android:layout_gravity="center"
+        android:text="@string/episodes"
+        android:textColor="@color/white"
+        android:alpha=".75" />
+
+    <Button
+        android:id="@+id/btnLocations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corners_black"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:text="Locations"
+        android:textColor="@color/white"
+        android:alpha=".75" />
 
 </FrameLayout>
