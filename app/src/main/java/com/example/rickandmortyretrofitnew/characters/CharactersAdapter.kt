@@ -1,4 +1,4 @@
-package com.example.rickandmortyretrofitnew
+package com.example.rickandmortyretrofitnew.characters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,7 @@ import coil.transform.CircleCropTransformation
 import com.example.rickandmortyretrofitnew.databinding.RvItemBinding
 import com.example.rickandmortyretrofitnew.network.Character
 
-class MainAdapter(val charactersList: List<Character>) : RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
+class CharactersAdapter(val charactersList: List<Character>) : RecyclerView.Adapter<CharactersAdapter.MainViewHolder>() {
 
     inner class MainViewHolder(private val itemBinding: RvItemBinding) : RecyclerView.ViewHolder(itemBinding.root) {
         fun bindData(character: Character) {

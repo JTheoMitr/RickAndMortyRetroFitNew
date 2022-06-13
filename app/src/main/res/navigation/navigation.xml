@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/charactersFragment">
+
+    <fragment
+        android:id="@+id/charactersFragment"
+        android:name="com.example.rickandmortyretrofitnew.characters.CharactersFragment"
+        android:label="fragment_characters"
+        tools:layout="@layout/fragment_characters" >
+        <action
+            android:id="@+id/action_charactersFragment_to_episodesActivity"
+            app:destination="@id/episodesActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/episodesActivity"
+        android:name="com.example.rickandmortyretrofitnew.EpisodesActivity"
+        android:label="fragment_episodes"
+        tools:layout="@layout/fragment_episodes" />
+</navigation>
