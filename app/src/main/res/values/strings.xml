@@ -7,9 +7,9 @@
     <string name="sign_up">Sign Up</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="characters">Characters</string>
     <string name="episodes">Episodes</string>
+    <string name="client_id">1001887869213-sd4nn17g155slmd4a88qf0kg728p7teo.apps.googleusercontent.com</string>
 
 </resources>
