@@ -39,7 +39,7 @@ class LoginActivity : AppCompatActivity() {
 
             googleSignIn()
 
-//
+
         }
 
         // Configure google sign in
@@ -73,26 +73,27 @@ class LoginActivity : AppCompatActivity() {
     private fun googleSignIn() {
 
         val account = GoogleSignIn.getLastSignedInAccount(this)
+        Log.d("SSO", "last account email is: ${account?.email}")
         if (account == null) {
             val signInIntent = googleAuth.signInIntent
             startActivityForResult(signInIntent, CONST_SIGN_IN)
-        } else if (account != null) {
+        } else {
             firebaseAuthWithGoogle(account.idToken)
         }
     }
 
-//    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-//        super.onActivityResult(requestCode, resultCode, data)
-//        if (requestCode == CONST_SIGN_IN) {
-//            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-//            try {
-//                val account = task.getResult(ApiException::class.java)
-//                firebaseAuthWithGoogle(account.idToken)
-//            }
-//            catch (e:ApiException) {
-//                Toast.makeText(this, "$e", Toast.LENGTH_LONG).show()
-//            }
-//        }
-//    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == CONST_SIGN_IN) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
+            try {
+                val account = task.getResult(ApiException::class.java)
+                firebaseAuthWithGoogle(account.idToken)
+            }
+            catch (e:ApiException) {
+                Toast.makeText(this, "$e", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
 }
 
