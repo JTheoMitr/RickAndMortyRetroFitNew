@@ -72,6 +72,7 @@ class LoginActivity : AppCompatActivity() {
 
     private fun googleSignIn() {
 
+        auth.signOut()
         val account = GoogleSignIn.getLastSignedInAccount(this)
         Log.d("SSO", "last account email is: ${account?.email}")
         if (account == null) {
