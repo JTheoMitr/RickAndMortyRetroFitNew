@@ -35,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
 
         supportActionBar?.hide()
 
-        binding.loginBtn.setOnClickListener {
+        binding.googleBtn.setOnClickListener {
 
             googleSignIn()
 
